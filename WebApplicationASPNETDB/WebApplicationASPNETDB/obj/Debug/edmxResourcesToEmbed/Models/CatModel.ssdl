@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CatDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CatTable">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" Nullable="false" />
+    <Property Name="Name" Type="ntext" Nullable="false" />
+    <Property Name="Age" Type="tinyint" Nullable="false" />
+    <Property Name="DOB" Type="date" Nullable="false" />
+    <Property Name="Petname" Type="ntext" />
+  </EntityType>
+  <EntityContainer Name="CatDBModelStoreContainer">
+    <EntitySet Name="CatTable" EntityType="Self.CatTable" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
